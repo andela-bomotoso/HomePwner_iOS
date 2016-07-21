@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		100F563A1D40EBDB007C0C96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F56391D40EBDB007C0C96 /* AppDelegate.swift */; };
-		100F563C1D40EBDB007C0C96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F563B1D40EBDB007C0C96 /* ViewController.swift */; };
 		100F563F1D40EBDB007C0C96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100F563D1D40EBDB007C0C96 /* Main.storyboard */; };
 		100F56411D40EBDB007C0C96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100F56401D40EBDB007C0C96 /* Assets.xcassets */; };
 		100F56441D40EBDB007C0C96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100F56421D40EBDB007C0C96 /* LaunchScreen.storyboard */; };
+		100F564C1D40EF0C007C0C96 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F564B1D40EF0C007C0C96 /* ItemsViewController.swift */; };
+		100F564E1D40F25C007C0C96 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F564D1D40F25C007C0C96 /* Item.swift */; };
+		100F56501D40FA3C007C0C96 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F564F1D40FA3C007C0C96 /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		100F56361D40EBDB007C0C96 /* HomePwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomePwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		100F56391D40EBDB007C0C96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		100F563B1D40EBDB007C0C96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		100F563E1D40EBDB007C0C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		100F56401D40EBDB007C0C96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		100F56431D40EBDB007C0C96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		100F56451D40EBDB007C0C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100F564B1D40EF0C007C0C96 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = ../ItemsViewController.swift; sourceTree = "<group>"; };
+		100F564D1D40F25C007C0C96 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		100F564F1D40FA3C007C0C96 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,8 @@
 		100F562D1D40EBDB007C0C96 = {
 			isa = PBXGroup;
 			children = (
+				100F564D1D40F25C007C0C96 /* Item.swift */,
+				100F564F1D40FA3C007C0C96 /* ItemStore.swift */,
 				100F56381D40EBDB007C0C96 /* HomePwner */,
 				100F56371D40EBDB007C0C96 /* Products */,
 			);
@@ -55,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				100F56391D40EBDB007C0C96 /* AppDelegate.swift */,
-				100F563B1D40EBDB007C0C96 /* ViewController.swift */,
+				100F564B1D40EF0C007C0C96 /* ItemsViewController.swift */,
 				100F563D1D40EBDB007C0C96 /* Main.storyboard */,
 				100F56401D40EBDB007C0C96 /* Assets.xcassets */,
 				100F56421D40EBDB007C0C96 /* LaunchScreen.storyboard */,
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				100F563C1D40EBDB007C0C96 /* ViewController.swift in Sources */,
+				100F564C1D40EF0C007C0C96 /* ItemsViewController.swift in Sources */,
+				100F564E1D40F25C007C0C96 /* Item.swift in Sources */,
+				100F56501D40FA3C007C0C96 /* ItemStore.swift in Sources */,
 				100F563A1D40EBDB007C0C96 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
