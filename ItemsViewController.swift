@@ -37,4 +37,11 @@ class ItemsViewController : UITableViewController   {
         return cell
     }
     
-   }
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if(indexPath.row == itemStore.allItems.count - 1)   {
+            return 44
+        }   else    {
+            return 60
+        }
+    }
+}
