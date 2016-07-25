@@ -35,6 +35,9 @@ class ItemsViewController : UITableViewController   {
         let insets = UIEdgeInsets(top:statusBarHeight, left:0, bottom:0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets  = insets
+        //tableView.rowHeight = 65
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 65
     }
     
     
@@ -47,14 +50,17 @@ class ItemsViewController : UITableViewController   {
         
         UITableViewCell {
        // let cell = UITableViewCell(style: .Value1, reuseIdentifier: "UITableViewCell")
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell",forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell",forIndexPath: indexPath) as! ItemCell
+        cell.updateLabel()
         let item = itemStore.allItems[indexPath.row]
-        cell.textLabel?.text = item.name
-            if item.valueInDollars != 0 {
-                cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+        cell.nameLabel.text = item.name
+        cell.serialNumberLabel.text = item.serialNumber
+            cell.valueLabel?.text = "$\(item.valueInDollars)"
+            if item.valueInDollars < 50 {
+                cell.valueLabel.textColor = UIColor.greenColor()
+                
             }   else    {
-                cell.detailTextLabel?.text = " "
+                cell.valueLabel.textColor = UIColor.redColor()
             }
         return cell
     }

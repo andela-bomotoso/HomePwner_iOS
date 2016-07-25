@@ -19,7 +19,7 @@ class Item : NSObject   {
         self.serialNumber = serialNumber
         self.valueInDollars = valueInDollars
         self.dateCreated = NSDate()
-        super.init()
+        //super.init()
     }
     
     convenience init(random: Bool = false)   {

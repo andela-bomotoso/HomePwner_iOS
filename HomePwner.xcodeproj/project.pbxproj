@@ -14,6 +14,7 @@
 		100F564C1D40EF0C007C0C96 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F564B1D40EF0C007C0C96 /* ItemsViewController.swift */; };
 		100F564E1D40F25C007C0C96 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F564D1D40F25C007C0C96 /* Item.swift */; };
 		100F56501D40FA3C007C0C96 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F564F1D40FA3C007C0C96 /* ItemStore.swift */; };
+		10CAB19C1D46420800038C47 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CAB19B1D46420800038C47 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		100F564B1D40EF0C007C0C96 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = ../ItemsViewController.swift; sourceTree = "<group>"; };
 		100F564D1D40F25C007C0C96 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		100F564F1D40FA3C007C0C96 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		10CAB19B1D46420800038C47 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		100F562D1D40EBDB007C0C96 = {
 			isa = PBXGroup;
 			children = (
+				10CAB19B1D46420800038C47 /* ItemCell.swift */,
 				100F564D1D40F25C007C0C96 /* Item.swift */,
 				100F564F1D40FA3C007C0C96 /* ItemStore.swift */,
 				100F56381D40EBDB007C0C96 /* HomePwner */,
@@ -146,6 +149,7 @@
 				100F564E1D40F25C007C0C96 /* Item.swift in Sources */,
 				100F56501D40FA3C007C0C96 /* ItemStore.swift in Sources */,
 				100F563A1D40EBDB007C0C96 /* AppDelegate.swift in Sources */,
+				10CAB19C1D46420800038C47 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +297,7 @@
 				100F564A1D40EBDB007C0C96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
