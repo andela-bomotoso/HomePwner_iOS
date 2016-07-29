@@ -10,6 +10,11 @@ import UIKit
 class ItemsViewController : UITableViewController   {
     var itemStore: ItemStore!
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        navigationItem.leftBarButtonItem = editButtonItem()
+    }
+    
     @IBAction func addNewItem(sender:AnyObject) {
         let newItem = itemStore.createItem()
         if let index = itemStore.allItems.indexOf(newItem)  {
@@ -19,22 +24,22 @@ class ItemsViewController : UITableViewController   {
        
     }
     
-    @IBAction func toggleEditingMode(sender:AnyObject)  {
-        if editing  {
-            sender.setTitle("Edit", forState: .Normal)
-            setEditing(false, animated: true)
-        }   else    {
-            sender.setTitle("Done", forState: .Normal)
-            setEditing(true, animated: true)
-        }
-        
-    }
+//    @IBAction func toggleEditingMode(sender:AnyObject)  {
+//        if editing  {
+//            sender.setTitle("Edit", forState: .Normal)
+//            setEditing(false, animated: true)
+//        }   else    {
+//            sender.setTitle("Done", forState: .Normal)
+//            setEditing(true, animated: true)
+//        }
+//        
+//    }
     
     override func viewDidLoad() {
-        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-        let insets = UIEdgeInsets(top:statusBarHeight, left:0, bottom:0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets  = insets
+//        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+//        let insets = UIEdgeInsets(top:statusBarHeight, left:0, bottom:0, right: 0)
+//        tableView.contentInset = insets
+//        tableView.scrollIndicatorInsets  = insets
         //tableView.rowHeight = 65
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
@@ -87,5 +92,22 @@ class ItemsViewController : UITableViewController   {
     override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
         itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowItem"   {
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let item = itemStore.allItems[row]
+                let detailViewController = segue.destinationViewController as! DetailViewController
+                detailViewController.item = item
+            }
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    
     
    }
