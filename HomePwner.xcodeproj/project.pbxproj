@@ -15,6 +15,7 @@
 		100F564E1D40F25C007C0C96 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F564D1D40F25C007C0C96 /* Item.swift */; };
 		100F56501D40FA3C007C0C96 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100F564F1D40FA3C007C0C96 /* ItemStore.swift */; };
 		1017F7881D4B66D80002BEFE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1017F7871D4B66D80002BEFE /* DetailViewController.swift */; };
+		101F70541D4F5766000725FC /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F70531D4F5766000725FC /* ImageStore.swift */; };
 		10CAB19C1D46420800038C47 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CAB19B1D46420800038C47 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		100F564D1D40F25C007C0C96 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		100F564F1D40FA3C007C0C96 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		1017F7871D4B66D80002BEFE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		101F70531D4F5766000725FC /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		10CAB19B1D46420800038C47 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				100F56391D40EBDB007C0C96 /* AppDelegate.swift */,
 				100F564B1D40EF0C007C0C96 /* ItemsViewController.swift */,
 				100F563D1D40EBDB007C0C96 /* Main.storyboard */,
+				101F70531D4F5766000725FC /* ImageStore.swift */,
 				100F56401D40EBDB007C0C96 /* Assets.xcassets */,
 				100F56421D40EBDB007C0C96 /* LaunchScreen.storyboard */,
 				100F56451D40EBDB007C0C96 /* Info.plist */,
@@ -153,6 +156,7 @@
 				100F56501D40FA3C007C0C96 /* ItemStore.swift in Sources */,
 				1017F7881D4B66D80002BEFE /* DetailViewController.swift in Sources */,
 				100F563A1D40EBDB007C0C96 /* AppDelegate.swift in Sources */,
+				101F70541D4F5766000725FC /* ImageStore.swift in Sources */,
 				10CAB19C1D46420800038C47 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

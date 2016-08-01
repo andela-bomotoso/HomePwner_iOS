@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class DetailViewController:UIViewController, UITextFieldDelegate {
+class DetailViewController:UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var nameField: UITextField!
     
@@ -18,16 +18,40 @@ class DetailViewController:UIViewController, UITextFieldDelegate {
 
     @IBOutlet var dateLabel: UILabel!
   
-  
-    @IBAction func backgroundTapped(sender: AnyObject) {
+    @IBOutlet var imageView: UIImageView!
+    
+    @IBAction func takepicture(sender: UIBarButtonItem) {
+        
+        let imagePicker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.Camera)   {
+            imagePicker.sourceType = .Camera
+        }   else    {
+            imagePicker.sourceType = .PhotoLibrary
+        }
+        imagePicker.delegate = self
+        presentViewController(imagePicker, animated: true, completion: nil)
+       
+    
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageView.image = image
+        imageStore.setImage(image, forKey: item.itemKey)
+         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+       @IBAction func backgroundTapped(sender: AnyObject) {
         view.endEditing(true)
     }
 
     var item: Item! {
         didSet  {
-            navigationItem.title = item.name
+         navigationItem.title = item.name
         }
     }
+    var imageStore : ImageStore!
+    
     
     let numberFormatter : NSNumberFormatter = {
         let formatter = NSNumberFormatter()
@@ -51,8 +75,13 @@ class DetailViewController:UIViewController, UITextFieldDelegate {
         serialNumberField.text = item.serialNumber
         valueField.text = numberFormatter.stringFromNumber(item.valueInDollars)
         dateLabel.text = dateFormatter.stringFromDate(item.dateCreated)
+        
+        let key = item.itemKey
+        let imageToDisplay = imageStore.imageForKey(key)
+        imageView.image = imageToDisplay
     }
     
+    // MARK: - 
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         view.endEditing(true)
