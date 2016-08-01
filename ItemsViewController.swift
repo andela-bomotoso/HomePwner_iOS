@@ -71,7 +71,7 @@ class ItemsViewController : UITableViewController   {
         return cell
     }
     
-    // MARK: 
+    // MARK:
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle  == .Delete  {
             let item = itemStore.allItems[indexPath.row]
@@ -96,6 +96,7 @@ class ItemsViewController : UITableViewController   {
         itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
     }
     
+    // MARK:
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowItem"   {
             if let row = tableView.indexPathForSelectedRow?.row {
