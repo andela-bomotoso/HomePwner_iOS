@@ -43,7 +43,7 @@ class DetailViewController:UIViewController, UITextFieldDelegate, UINavigationCo
     
        @IBAction func backgroundTapped(sender: AnyObject) {
         view.endEditing(true)
-    }
+    } 
 
     var item: Item! {
         didSet  {
